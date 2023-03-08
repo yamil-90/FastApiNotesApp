@@ -1,6 +1,16 @@
 from sqlalchemy import create_engine
 from sqlalchemy.ext.declarative import declarative_base
-from sqlalchemy.orm import session, sessionmaker
+from sqlalchemy.orm import sessionmaker
+import os
+
+
+def db_name():
+    # if os.getenv('RUN_ENV') == 'test':
+    #         return 'test_' + os.getenv('DB_NAME')
+
+    return os.getenv('DB_NAME')
+
+db_name = str(db_name())
 
 SQLALCHEMY_DATABASE_URI = "sqlite:///./todo_app.db"
 

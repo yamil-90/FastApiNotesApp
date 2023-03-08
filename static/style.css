@@ -1,3 +1,25 @@
 .navbar-light .navbar-nav .navbar-link {
     color: #000
 }
+
+body {
+    background-color: #000;
+}
+
+
+.neonText {
+    color: rgb(247, 247, 247);
+    text-shadow: 0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 21px #fff,
+    0 0 42px #0fa,
+    0 0 82px #0fa
+}
+
+.neonBorder {
+     box-shadow: 0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 21px #fff,
+    0 0 42px #0fa,
+    0 0 82px #0fa !important;
+}

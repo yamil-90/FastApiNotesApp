@@ -1,21 +1,11 @@
-from fastapi import FastAPI, Request, Response, Depends, status, Form, Path, APIRouter
+from fastapi import Request, Depends, status, Form, Path, APIRouter
 from sqlalchemy.orm import Session
 from fastapi.templating import Jinja2Templates
 from fastapi.responses import RedirectResponse
-from database import SessionLocal, engine, DBContext
-from fastapi_login import LoginManager
-from dotenv import load_dotenv
-from services import manager
+from services import manager, get_db
 
-import os
-import models
 import crud
 import schemas
-
-# TODO should be in import
-def get_db():
-    with DBContext() as db:
-        yield db
 
 route = APIRouter()
 templates = Jinja2Templates(directory="templates")

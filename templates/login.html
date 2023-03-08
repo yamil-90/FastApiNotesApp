@@ -9,16 +9,16 @@
     }
 </style>
 <div class="container">
-    <form action="/login" method="POST">
+    <form action="/login" class="neonText" method="POST">
         <div>
             <label for="username" class="form-label">Username</label>
             <input type="text" id="username" name="username" required class="form-control">
         </div>
         <div>
-            <label for="password" class="form-label">Password</label>
+            <label for="password" class="form-label neonText">Password</label>
             <input type="password" id="password" name="password" required class="form-control">
         </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button style="margin-top: 10px" type="submit" class="btn btn-primary">Submit</button>
     </form>
     {% if invalid %}
         <p style="margin-top: 0.5em; color: #eb4823">Invalid Username or Password, Try again</p>
